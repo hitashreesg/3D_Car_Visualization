@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: Monospace;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+a {
+  color: #ff0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+canvas {
+  display: block;
+}
+
+#info {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1; /* TODO Solve this in HTML */
+}
+
+.dg.ac {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 2 !important; /* TODO Solve this in HTML */
+}
+
+/* === Chatbot Styles === */
+#chatbot {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  z-index: 5;
+}
+
+#chat-log {
+  max-height: 150px;
+  overflow-y: auto;
+  background: #111;
+  padding: 6px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+#chat-log .user {
+  color: #0f0;
+}
+
+#chat-log .bot {
+  color: #0ff;
+}
+
+#chat-input {
+  width: 160px;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+#send-btn, #voice-btn {
+  padding: 6px 10px;
+  margin-left: 4px;
+  border-radius: 6px;
+  border: none;
+  background: #08f;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#send-btn:hover, #voice-btn:hover {
+  background: #0af;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Car in AR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <!-- A-Frame + AR.js -->
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ar.js@4.3.1/aframe/build/aframe-ar.js"></script>
+
+  <style>
+    body { margin: 0; overflow: hidden; }
+    #enter-ar {
+      position: absolute;
+      top: 10px; left: 10px;
+      z-index: 10;
+      padding: 8px 14px;
+      font-size: 16px;
+      background: #222; color: #fff; border: none; border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<button id="enter-ar">Start AR</button>
+
+<!-- AR scene (hidden until button is clicked) -->
+<a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled: false" style="display:none;">
+  
+  <!-- Lighting -->
+  <a-entity light="type: ambient; intensity: 0.8"></a-entity>
+  <a-entity light="type: directional; intensity: 0.6" position="5 10 5"></a-entity>
+
+  <!-- Car model -->
+  <a-entity id="car" 
+            gltf-model="url(models/car.gltf)" 
+            scale="0.5 0.5 0.5" 
+            position="0 0 -2">
+  </a-entity>
+</a-scene>
+
+<script src="ar-main.js"></script>
+</body>
+</html>

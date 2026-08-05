@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>3D Car Model</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <style>
+      body {
+        color: #444;
+      }
+      a {
+        color: #08f;
+      }
+      #container {
+        /* Add styling for your Three.js container */
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+      #info {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        z-index: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info">
+       Visualization and Customization<br/>
+      Ferrari 458 model 
+    
+    
+      <br><br>
+
+      <span>Body: <select id="body-mat"></select></span>
+      <span>Details: <select id="rim-mat"></select></span>
+      <span>Glass: <select id="glass-mat"></select></span>
+      <br><br>
+
+      <span>Follow camera: <input type="checkbox" id="camera-toggle"></span>
+      <br><br>
+
+      <span>Lighting System: 
+        <select id="lighting-select">
+          <option value="none">None</option>
+          <option value="directional">Directional Light</option>
+          <option value="ambient">Ambient Light</option>
+          <option value="night">Night Light</option>
+          <option value="dark">Dark Light</option>
+          <option value="showroom">Showroom Light</option>
+        </select>
+      </span>
+    </div>
+
+    <div id="container"></div>
+
+    <div id="chatbot">
+      <div id="chat-log"></div>
+      <div style="display:flex; align-items:center; margin-top:5px;">
+        <input id="chat-input" type="text" placeholder="Type a command...">
+        <button id="send-btn">Send</button>
+        <button id="voice-btn">🎤</button>
+      </div>
+    </div>
+    
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
